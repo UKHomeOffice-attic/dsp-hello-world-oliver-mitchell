@@ -24,7 +24,7 @@ image_to_quay:
   environment:
     - DOCKER_HOST=tcp://127.0.0.1:2375
   commands:
-    - docker login -u="ukhomeofficedigital+drone_demo" -p=${DOCKER_PASSWORD} quay.io
+    - docker login -u="oliver_mitchell_cic_uk" -p=${DOCKER_PASSWORD} quay.io
     - docker tag hello quay.io/ukhomeofficedigital/dsp-hello-world-oliver-mitchell:${DRONE_COMMIT_SHA}
     - docker push quay.io/ukhomeofficedigital/dsp-hello-world-oliver-mitchell:${DRONE_COMMIT_SHA}
   when:
